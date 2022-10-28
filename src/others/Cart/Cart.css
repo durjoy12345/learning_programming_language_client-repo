@@ -1,0 +1,12 @@
+.flex{
+    width: 100%;
+}
+.width{
+    width: 258px;
+    height: 650px;
+    float: left;
+    padding: 10px;
+    margin: 6px;
+    border-radius: 15px;
+}
+
