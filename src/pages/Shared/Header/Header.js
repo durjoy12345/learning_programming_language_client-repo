@@ -26,13 +26,13 @@ const Header = () => {
 
   const handleGoogleSignIn = () => {
     googleSignIn(googleProvider)
-    .then((result) => {
-      const user = result.user;
-      console.log(user)
-    }).catch((error) => {
-      console.error(error);
-    });
-  
+      .then((result) => {
+        const user = result.user;
+        console.log(user)
+      }).catch((error) => {
+        console.error(error);
+      });
+
   }
 
 
@@ -44,28 +44,28 @@ const Header = () => {
             <img
               alt=""
               src={Images}
-              width="40"
-              height="40"
-              className="d-inline-block align-top me-2"
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
             />{" "}
-            Fun Learning Times!!
+            <small>learning-programming language</small>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link className="fw-semibold ms-2" href="/">
+              <Nav.Link className="ms-1" href="/">
                 Home
               </Nav.Link>
-              <Nav.Link className="fw-semibold ms-2" href="/courses">
+              <Nav.Link className="ms-1" href="/courses">
                 Courses
               </Nav.Link>
-              <Nav.Link className="fw-semibold ms-2" href="/error">
+              <Nav.Link className="ms-1" href="/error">
                 4O4 Page
               </Nav.Link>
-              <Nav.Link className="fw-semibold ms-2 me-2" href="/blog">
+              <Nav.Link className="ms-1 me-2" href="/blog">
                 Blog
               </Nav.Link>
-              <Nav.Link className="fw-semibold ms-2 me-2" href="/pdf">
+              <Nav.Link className="ms-1 me-1" href="/pdf">
                 pdf
               </Nav.Link>
               <ThemeSetUp></ThemeSetUp>
@@ -88,12 +88,12 @@ const Header = () => {
                 ) : (
                   <>
                     <FaUser></FaUser>
-                    <span className="fw-semibold ms-2">Log In</span>
+                    <span className="ms-1">Log In</span>
                   </>
                 )}
               </Nav.Link>
-              <Nav.Link className="fw-semibold me-2" href="">
-              <span onClick={handleGoogleSignIn} className="fw-semibold ms-2">GoogleSignIn</span>
+              <Nav.Link className="me-1" href="">
+                <span onClick={handleGoogleSignIn} className="ms-1">GoogleSignIn</span>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
